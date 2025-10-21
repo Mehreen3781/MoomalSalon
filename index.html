@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moomal Salon & Training Center | Larkana</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color:#1a472a; /* Deep blue/navy from the card */
+            --secondary-color: #2e8b57 ; 
+            
+            
+           
+            --accent-color: #99cdb3; 
+            --dark-color: #2c2c2c;
+            --light-color: #ffffff;
+            --medium-green: #2e8b57;
+        }
+        
+
+
+
+
+           
+
+
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+            background-color: var(--accent-color);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* Header Styles */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--secondary-color);
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: var(--light-color);
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(26, 43, 76, 0.8), rgba(48, 67, 105, 0.8)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--light-color);
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--light-color);
+        }
+        
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border: none;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #99cdb3 ;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color:  #2e8b57;
+        }
+        
+        /* Section Styles */
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Services Section */
+        .service-card {
+            background-color: var(--light-color);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+            border-top: 3px solid var(--secondary-color);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-size: 28px;
+        }
+        
+        /* About Section */
+        .about-content {
+            padding-right: 30px;
+        }
+        
+        .about-image {
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(201, 169, 110, 0.3);
+        }
+        
+        /* Training Section */
+        .training-section {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+        }
+        
+        .training-section .section-title h2 {
+            color: var(--light-color);
+        }
+        
+        .training-section .section-title h2::after {
+            background-color: var(--secondary-color);
+        }
+        
+        .training-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+        }
+        
+        .training-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background-color: var(--light-color);
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin: 15px;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 40px;
+            border-radius: 5px;
+            height: 100%;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info-item i {
+            margin-right: 15px;
+            font-size: 20px;
+            margin-top: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .contact-form {
+            background-color: var(--light-color);
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+        }
+        
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.2rem rgba(201, 169, 110, 0.25);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h5 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: var(--light-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+        }
+        
+        /* Call to Action Banner */
+        .cta-banner {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .cta-banner h4 {
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .about-content {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Moomal Salon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#training">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Moomal Salon</h1>
+                <div class="subtitle">Beauty Salon & Training Centre</div>
+                <p>Experience luxury beauty services and professional training in the heart of Larkana. We bring out your natural beauty with our expert stylists and comprehensive courses.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <div class="cta-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h4>Ready to transform your look? Book your appointment today!</h4>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="#contact" class="btn btn-outline-dark">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Learn more about our journey and commitment to beauty</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3>Welcome to Moomal Salon & Training Center</h3>
+                        <p>Established with a passion for beauty and excellence, Moomal Salon has been serving the community of Larkana with premium beauty services. Our team of certified professionals is dedicated to bringing out your natural beauty with the latest techniques and highest quality products.</p>
+                        <p>In addition to our salon services, we take pride in our Training Center where we've helped hundreds of students launch successful careers in the beauty industry through our comprehensive courses and hands-on training.</p>
+                        <p>Located near Gurai Hospital, Resham Galli, Larkana, we're easily accessible and committed to providing a luxurious experience for all our clients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Salon Interior" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section-padding" id="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Premium beauty treatments for every occasion</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/hairstyle1.jpg" alt="Hair Styling">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Hair Styling</h4>
+                        <p>From trendy cuts to classic styles, our expert stylists will create the perfect look for you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Facials & Skincare">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Facials & Skincare</h4>
+                        <p>Rejuvenate your skin with our customized facials and premium skincare treatments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/makeup1.jpg" alt="Makeup Artistry">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Makeup Artistry</h4>
+                        <p>Professional makeup for weddings, events, or just to enhance your everyday look.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1607778835369-8bad0ff56d54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Manicure & Pedicure">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Manicure & Pedicure</h4>
+                        <p>Pamper your hands and feet with our luxurious nail care services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Hair Coloring">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Hair Coloring</h4>
+                        <p>Transform your look with our expert hair coloring services using premium products.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Bridal Packages">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Bridal Packages</h4>
+                        <p>Complete bridal packages to make your special day absolutely perfect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+<style>
+    /* Service Card Images */
+    .service-image {
+        height: 400px;
+        overflow: hidden;
+    }
+    
+    .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover .service-image img {
+        transform: scale(1.05);
+    }
+    
+    /* Training Card Images */
+    .training-image {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .training-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .training-card:hover .training-image img {
+        transform: scale(1.05);
+    }
+    
+    /* Update existing styles for better image integration */
+    .service-card {
+        background-color: var(--light-color);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+        height: 100%;
+        border-top: 4px solid var(--medium-green);
+    }
+    
+    .training-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+</style>
+
+
+
+
+
+ <!-- Services Section -->
+    <section class="section-padding" id="services" style="background-color: var(--accent-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Premium beauty treatments for every occasion</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4>Hair Styling</h4>
+                            <p>From trendy cuts to classic styles, our expert stylists will create the perfect look for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4>Facials & Skincare</h4>
+                            <p>Rejuvenate your skin with our customized facials and premium skincare treatments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4>Makeup Artistry</h4>
+                            <p>Professional makeup for weddings, events, or just to enhance your everyday look.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-sparkles"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4>Manicure & Pedicure</h4>
+                            <p>Pamper your hands and feet with our luxurious nail care services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4>Hair Coloring</h4>
+                            <p>Transform your look with our expert hair coloring services using premium products.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4>Bridal Packages</h4>
+                            <p>Complete bridal packages to make your special day absolutely perfect.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Training Section -->
+    <section class="section-padding training-section" id="training">
+        <div class="container">
+            <div class="section-title">
+                <h2>Training Programs</h2>
+                <p>Launch your career in the beauty industry with our professional courses</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="training-card">
+                        <div class="card-body p-4">
+                            <h4>Basic Beauty Course</h4>
+                            <p>3-month comprehensive course covering fundamentals of beauty treatments, skincare, and basic makeup.</p>
+                            <ul class="mt-3">
+                                <li>Duration: 3 Months</li>
+                                <li>Certification: Yes</li>
+                                <li>Placement Assistance: Yes</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="training-card">
+                        <div class="card-body p-4">
+                            <h4>Advanced Hair Styling</h4>
+                            <p>Specialized 4-month course focusing on advanced cutting techniques, coloring, and styling.</p>
+                            <ul class="mt-3">
+                                <li>Duration: 4 Months</li>
+                                <li>Certification: Yes</li>
+                                <li>Placement Assistance: Yes</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="training-card">
+                        <div class="card-body p-4">
+                            <h4>Professional Makeup Artistry</h4>
+                            <p>6-month intensive program covering bridal, editorial, and special effects makeup.</p>
+                            <ul class="mt-3">
+                                <li>Duration: 6 Months</li>
+                                <li>Certification: Yes</li>
+                                <li>Placement Assistance: Yes</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about us</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>"Moomal Salon transformed my look for my wedding day. The makeup was flawless and lasted all night. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client">
+                            <div>
+                                <h5>Sarah Khan</h5>
+                                <p>Bride</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>"I completed the Basic Beauty Course and now I have my own salon. The training was comprehensive and the instructors were excellent."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                            <div>
+                                <h5>Fatima Ahmed</h5>
+                                <p>Beauty Course Graduate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>"The facials at Moomal Salon have completely transformed my skin. The estheticians are knowledgeable and use high-quality products."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client">
+                            <div>
+                                <h5>Ayesha Siddiqui</h5>
+                                <p>Regular Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch to book an appointment or inquire about our courses</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h3>Visit Our Salon</h3>
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p>Near Gafri Imam Bargha, Resham Galli, Larkana, Sindh Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>0347-2275543<br>0331-3372224</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>info@moomalsalon.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h5>Opening Hours</h5>
+                                <p>Mon - Sat: 10:00 AM - 8:00 PM<br>Sunday: 11:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Your Phone">
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control" required>
+                                        <option value="" disabled selected>Select Service</option>
+                                        <option>Hair Styling</option>
+                                        <option>Facials & Skincare</option>
+                                        <option>Makeup Artistry</option>
+                                        <option>Manicure & Pedicure</option>
+                                        <option>Hair Coloring</option>
+                                        <option>Bridal Packages</option>
+                                        <option>Training Inquiry</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo">Moomal Salon</div>
+                    <p>Premium beauty services and professional training in the heart of Larkana. We bring out your natural beauty with our expert stylists and comprehensive courses.</p>
+                    
+                    <div class="social-icons mt-4">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/923472275543" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.youtube.com/@mmirani32/shorts" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.tiktok.com/@moomal702salonlarkana4" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div> 
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#training">Training</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h5>Our Services</h5>
+                        <ul>
+                            <li><a href="#">Hair Styling</a></li>
+                            <li><a href="#">Facials & Skincare</a></li>
+                            <li><a href="#">Makeup Artistry</a></li>
+                            <li><a href="#">Manicure & Pedicure</a></li>
+                            <li><a href="#">Bridal Packages</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h5>Training Programs</h5>
+                        <ul>
+                            <li><a href="#">Basic Beauty Course</a></li>
+                            <li><a href="#">Advanced Hair Styling</a></li>
+                            <li><a href="#">Professional Makeup</a></li>
+                            <li><a href="#">Skincare Specialist</a></li>
+                            <li><a href="#">Nail Art Course</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Moomal Salon & Training Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'var(--primary-color)';
+                navbar.style.padding = '10px 0';
+            } else {
+                navbar.style.padding = '15px 0';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
